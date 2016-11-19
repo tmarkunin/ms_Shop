@@ -16,11 +16,13 @@
     console.log("*************************************************");
         // globally set the API URLS
         var productsApi = 'https://msproductapi.au-syd.mybluemix.net';
-        var cartApi     = 'https://mscartapi.au-syd.mybluemix.net';
         var reviewApi   = 'https://msreviewapi.au-syd.mybluemix.net';
         if(process.env.CART_API){
         	console.log("CART_API: " + process.env.CART_API);
         	cartApi     =   process.env.CART_API;
+        }
+        else{
+        	var cartApi     = 'https://mscartapi.au-syd.mybluemix.net';
         }
         
         
