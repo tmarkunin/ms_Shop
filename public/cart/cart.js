@@ -1,14 +1,5 @@
 (function(){
   var app = angular.module('cart', []);
-  var cartAPI;
-          if(process.env.CART_API){
-        	console.log("CART_API: " + process.env.CART_API);
-        	cartApi     =   process.env.CART_API;
-        }
-        else{
-        	
-        	console.log("CART_API environment isn't defined ");
-        }
 
   app.factory('cart', function($http, $rootScope) {
 	    var cart = [];
