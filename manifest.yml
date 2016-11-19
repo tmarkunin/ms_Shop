@@ -1,12 +1,7 @@
----
-declared-services:
-  MongoDB:
-    label: mongodb
-    plan: 100
 
 applications:
-- name: microservicesStore
-  memory: 256M #The maximum memory to allocate to each application instance
+- name: ms_StoreUI
+  memory: 128M #The maximum memory to allocate to each application instance
   instances: 1 #The number of instances of the application to start
   services:
-  - MongoDB
+  - tmamongodbms
