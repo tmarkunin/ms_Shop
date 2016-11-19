@@ -14,9 +14,15 @@
 
     <script>
         // globally set the API URLS
-        var productsApi = 'http://192.168.99.100:49160';
-        var cartApi     = 'http://192.168.99.100:49161';
-        var reviewApi   = 'http://192.168.99.100:49162';
+        var productsApi = 'https://msproductapi.au-syd.mybluemix.net';
+        var cartApi     = 'https://mscartapi.au-syd.mybluemix.net';
+        var reviewApi   = 'https://msreviewapi.au-syd.mybluemix.net';
+        if(process.env.CART_API){
+        	console.log("CART_API: " + process.env.CART_API);
+        	cartApi     =   process.env.CART_API;
+        }
+        
+
     </script>
 
   </head>
